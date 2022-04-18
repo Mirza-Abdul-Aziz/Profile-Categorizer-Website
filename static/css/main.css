@@ -84,6 +84,9 @@ body {
   top: 503px;
 }
 
+.politician {
+  margin-left: auto;
+}
 #navbar-style {
   background-color: var(--navbar-color);
 }
