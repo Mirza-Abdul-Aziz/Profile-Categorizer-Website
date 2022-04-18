@@ -4,6 +4,8 @@
   --white: #ffffff;
   --text-dark-blue: #1163a0;
   --navbar-color: lightgray;
+  --mt-title-supp: 15px;
+  --ml-title-supp: 20px;
 }
 body {
   margin: 0;
@@ -15,8 +17,8 @@ body {
   background-position: center;
 }
 .div-title{
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-top: var(--mt-title-supp);
+  margin-left: var(--ml-title-supp);
   max-width: 419px;
   color: var(--text-dark-blue);
   font-size: 54px;
@@ -25,7 +27,16 @@ body {
   font-weight: bolder;
   font-family: Poppins, sans-serif;
 }
-
+.title-div-supp{
+  max-width: 577px;
+  margin-top: 25px;
+  margin-left: var(--ml-title-supp);
+  color: var(--text-dark-blue);
+  font-size: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  font-family: Poppins, sans-serif;
+}
 #navbar-style{
   background-color: var(--navbar-color);
 }
