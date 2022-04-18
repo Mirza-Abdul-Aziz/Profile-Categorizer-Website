@@ -1,0 +1,38 @@
+:root {
+  --gray: #d6d6d6;
+  --text-blue: #55acee;
+  --white: #ffffff;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--gray);
+  background-image: url("../title-icon.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.div-title{
+  
+}
+#navbar-style{
+  background-color: var(--gray);
+}
+#nav-title {
+  color: var(--text-blue);
+  font-weight: bolder;
+  font-size: large;
+}
+#navlink {
+  color: var(--text-blue);
+  text-decoration: none;
+  margin: 10px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: medium;
+} 
+#navlink:hover{
+  color: var(--white);
+  border-radius: 15px;
+  background: var(--text-blue);
+}
