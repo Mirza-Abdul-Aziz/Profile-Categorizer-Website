@@ -2,6 +2,8 @@
   --gray: #d6d6d6;
   --text-blue: #55acee;
   --white: #ffffff;
+  --text-dark-blue: #1163a0;
+  --navbar-color: lightgray;
 }
 body {
   margin: 0;
@@ -13,10 +15,19 @@ body {
   background-position: center;
 }
 .div-title{
-  
+  margin-top: 10px;
+  margin-left: 20px;
+  max-width: 419px;
+  color: var(--text-dark-blue);
+  font-size: 54px;
+  line-height: normal;
+  text-align: left;
+  font-weight: bolder;
+  font-family: Poppins, sans-serif;
 }
+
 #navbar-style{
-  background-color: var(--gray);
+  background-color: var(--navbar-color);
 }
 #nav-title {
   color: var(--text-blue);
