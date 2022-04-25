@@ -1,16 +1,17 @@
 :root {
-  --gray: #d6d6d6;
+  --body-color: #d6d6d6;
   --text-blue: #55acee;
   --white: #ffffff;
   --text-dark-blue: #1163a0;
   --navbar-color: lightgray;
+  --camera-di: "../camera.svg":
   --mt-title-supp: 15px;
   --ml-title-supp: 20px;
 }
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: var(--gray);
+  background-color: var(--body-color);
   background-image: url("../title-icon.svg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -76,17 +77,6 @@ body {
   border-color: var(--text-blue);
 }
 
-.twitter-logo {
-  position: absolute;
-  width: 256px;
-  height: 209px;
-  left: 515px;
-  top: 503px;
-}
-
-.politician {
-  margin-left: auto;
-}
 #navbar-style {
   background-color: var(--navbar-color);
 }
@@ -107,4 +97,10 @@ body {
   color: var(--white);
   border-radius: 15px;
   background: var(--text-blue);
+}
+#category-icons{
+  margin-left: 10%;
+}
+#category-icons div{
+  margin-bottom: 30px;
 }

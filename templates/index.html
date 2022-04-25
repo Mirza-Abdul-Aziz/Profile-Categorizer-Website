@@ -39,6 +39,8 @@
     <!-- //Importing custom CSS -->
     <link rel="stylesheet" href="../static/css/main.css" />
 
+    <script src="../static/javascript/main.js"></script>
+
     <title>Profile Categorizer</title>
   </head>
 
@@ -58,6 +60,17 @@
             <div class="collapse navbar-collapse" id="collapse_target">
                 <!--List of items in navbar  -->
               <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navlink" data-toggle="dropdown" data-target="dropdown_target">
+                    Change Theme
+                    <span class="caret"></span>
+                  </a>
+                  <!-- Dropdown items of theme selection -->
+                    <div class="dropdown-menu" aria-labelledby="dropdown_target">
+                      <a class='nav-link' id="navlink" href='#' onclick="light_theme()">Light</a>
+                      <a class='nav-link' id="navlink" href='#' onclick="dark_theme()">Dark</a>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="#" class="nav-link" id="navlink">Home</a></li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" id="navlink" data-toggle="dropdown" data-target="dropdown_target">
@@ -81,7 +94,7 @@
     </nav>
 
     <div class="row">
-      <div class="col-4">
+      <div class="col-6">
         <div class="div-title">Make your search easy!!</div>
         <div class="title-div-supp">
           We provide you a system to search for specific category out of million
@@ -92,11 +105,27 @@
           <button>Get Started</button>
         </div>
       </div>
-      <div class="col-4">
-        <img class="twitter-logo"  src="../static/twitter-logo.svg" alt="">
-      </div>
-      <div class="col-4">
-        <img src="../static/people.svg" alt="" class="politician">
+      <div class="col-6">
+        <div class="col" id="category-icons">
+          <div class="row-2">
+            <img src="../static/people.svg" alt="" class="politician">
+          </div>
+          <div class="row-2">
+            <img src="../static/education-icon.svg" alt="" class="politician">
+          </div>
+          <div class="row-2">
+            <img src="../static/football.svg" alt="" class="politician">
+          </div>
+          <div class="row-2">
+            <img src="../static/camera.svg" alt="" class="politician">
+          </div>
+          <div class="row-2">
+            <img src="../static/music.svg" alt="" class="politician">
+          </div>
+          <div class="row-2">
+            <img src="../static/theatre.svg" alt="" class="politician">
+          </div>
+        </div>
       </div>
     </div>
   </body>
