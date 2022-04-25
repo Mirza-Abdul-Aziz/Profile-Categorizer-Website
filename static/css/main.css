@@ -30,7 +30,7 @@ body {
   font-size: 54px;
   line-height: 81px;
 
-  color: #1163a0;
+  color: var(--text-dark-blue);
 }
 .title-div-supp {
   position: absolute;
@@ -45,7 +45,7 @@ body {
   font-size: 24px;
   line-height: 36px;
 
-  color: #1163a0;
+  color: var(--text-dark-blue);
 }
 .get-started-btn {
   text-align: left;
@@ -66,7 +66,7 @@ body {
   font-weight: bolder;
   color: var(--text-dark-blue);
 
-  background: var(--gray);
+  background: var(--body-color);
   border: 0px;
   box-shadow: 5px 4px 10px;
   border-radius: 41px;
@@ -99,7 +99,9 @@ body {
   background: var(--text-blue);
 }
 #category-icons{
-  margin-left: 10%;
+  margin-top: 70px;
+  padding-right: 50px;
+  text-align: right;
 }
 #category-icons div{
   margin-bottom: 30px;
