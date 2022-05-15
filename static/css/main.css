@@ -4,12 +4,11 @@
   --white: #ffffff;
   --text-dark-blue: #1163a0;
   --navbar-color: lightgray;
-  --camera-di: "../camera.svg":
   --mt-title-supp: 15px;
   --ml-title-supp: 20px;
 }
+
 body {
-  margin: 0;
   font-family: sans-serif;
   background-color: var(--body-color);
   background-image: url("../title-icon.svg");
@@ -98,11 +97,11 @@ body {
   border-radius: 15px;
   background: var(--text-blue);
 }
-#category-icons{
+#category-icons {
   margin-top: 70px;
-  padding-right: 50px;
+  padding-right: 25px;
   text-align: right;
 }
-#category-icons div{
+#category-icons div {
   margin-bottom: 30px;
 }
