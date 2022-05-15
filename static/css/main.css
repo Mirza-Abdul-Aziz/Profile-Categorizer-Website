@@ -9,7 +9,6 @@
 }
 
 body {
-  font-family: sans-serif;
   background-color: var(--body-color);
   background-image: url("../title-icon.svg");
   background-repeat: no-repeat;
@@ -17,11 +16,9 @@ body {
   background-position: center;
 }
 .div-title {
-  position: absolute;
-  width: 419px;
-  height: 181px;
-  left: 57px;
-  top: 220px;
+  width: 650px;
+  padding-left: 37px;
+  padding-top: 150px;
 
   font-family: "Poppins";
   font-style: normal;
@@ -32,11 +29,10 @@ body {
   color: var(--text-dark-blue);
 }
 .title-div-supp {
-  position: absolute;
   width: 577px;
   height: 178px;
-  left: 57px;
-  top: 389px;
+  padding-left: 37px;
+  padding-top: 29px;
 
   font-family: "Poppins";
   font-style: normal;
@@ -99,9 +95,61 @@ body {
 }
 #category-icons {
   margin-top: 70px;
-  padding-right: 25px;
+  padding-right: 15px;
   text-align: right;
 }
 #category-icons div {
   margin-bottom: 30px;
+}
+
+#search-div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 350px;
+  padding-left: 350px;
+}
+
+.search-label {
+  width: 462px;
+  height: 61px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+
+  color: var(--text-dark-blue);
+}
+
+.search-field {
+  text-align: center;
+  height: 79px;
+  width: 750px;
+  margin-left: 220px;
+
+  background: #c6c3c3;
+  border: 1px solid var(--text-dark-blue);
+  border-radius: 39.5px;
+}
+
+.search-btn{
+  width: 150px;
+  height: 76px;
+
+  font-weight: bolder;
+  color: var(--text-dark-blue);
+
+  background: var(--body-color);
+  border: 0px;
+  box-shadow: 5px 4px 10px;
+  border-radius: 41px;
+}
+
+.search-btn:hover{
+  background-color: var(--text-blue);
+  color: var(--white);
+  border-color: var(--text-blue);
 }

@@ -1,11 +1,33 @@
-{% extends "base.html" %}
-{% block title %} Search {% endblock %}
-{% block head %}
-    {{super()}}
-{% endblock %}
+{% import "components.html" as components %} 
+<!-- Extending from the base template -->
+{% extends "base.html" %} 
 
-{% block body %}
-    {% block navbar %}
-        {{super()}}
-    {% endblock %}    
+<!-- Titler block from the base template -->
+{% block title %} Search {% endblock %} 
+
+<!-- Head block where all the imports are included from the base tempalate -->
+{% block head %} {{super()}} {% endblock %} 
+{% block body %} 
+    {{ components.nav() }}
+    <div class="container-fluid">
+        <!-- Grid of two columns -->
+        <div class="row">
+
+            <!-- First column -->
+            <div class="col-10">
+                <form action="#" method="POST">
+                    <div id="search-div">
+                        <label for="search" class="search-label">Search Profile</label><br>
+                        <div class="input-group">
+                            <input type="text" class="search-field" placeholder="Enter Profile URL here" />
+                            <button type="submit" class="search-btn" value="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-2">
+                {{ components.sideIcons() }}
+            </div>
+        </div>
+    </div>
 {% endblock %}

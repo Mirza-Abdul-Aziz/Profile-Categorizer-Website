@@ -1,3 +1,4 @@
+from crypt import methods
 import imp
 from flask import Flask, render_template
 
@@ -7,7 +8,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route('/search') 
+@app.route('/search', methods=["POST", "GET"]) 
 def search():
     return render_template("search.html")
 

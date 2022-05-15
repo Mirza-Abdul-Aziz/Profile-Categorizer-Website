@@ -1,6 +1,6 @@
-{% extends "base.html" %} {% block title %} Profile Categorizer {% endblock %}
-{% block head %} {{super()}} {% endblock %} {% block body %} {% block navbar
-%}{{super()}}{% endblock %}
+{% import "components.html" as components %} {% extends "base.html" %} {% block
+title %} Profile Categorizer {% endblock %} {% block head %} {{super()}} {%
+endblock %} {% block body %} {{ components.nav() }}
 <div class="container-fluid">
   <div class="row">
     <div class="col-6">
@@ -15,28 +15,7 @@
         <button>Get Started</button>
       </div>
     </div>
-    <div class="col-6">
-      <div class="col" id="category-icons">
-        <div class="row-2">
-          <img src="../static/people.svg" alt="" class="politician" />
-        </div>
-        <div class="row-2">
-          <img src="../static/education-icon.svg" alt="" class="politician" />
-        </div>
-        <div class="row-2">
-          <img src="../static/football.svg" alt="" class="politician" />
-        </div>
-        <div class="row-2">
-          <img src="../static/camera.svg" alt="" class="politician" />
-        </div>
-        <div class="row-2">
-          <img src="../static/music.svg" alt="" class="politician" />
-        </div>
-        <div class="row-2">
-          <img src="../static/theatre.svg" alt="" class="politician" />
-        </div>
-      </div>
-    </div>
+    <div class="col-6">{{ components.sideIcons() }}</div>
   </div>
 </div>
 {% endblock %}
