@@ -15,16 +15,17 @@
 
             <!-- First column -->
             <div class="col-10">
-                <form action="#" method="POST">
+                <form action="{{ url_for('predict')}}" method="POST">
                     <div id="search-div">
                         <label for="search" class="search-label">Search Profile</label><br>
                         <div class="input-group">
-                            <input type="text" class="search-field" placeholder="Enter Profile URL here" />
-                            <button type="submit" class="search-btn" value="submit"><i class="fa fa-search"></i></button>
+                            <input type="text" name="user_url" class="search-field" placeholder="Enter Profile URL here" />
+                            <button type="submit" class="search-btn" value="predict"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </form>
             </div>
+            <!-- Second Column -->
             <div class="col-2">
                 {{ components.sideIcons() }}
             </div>

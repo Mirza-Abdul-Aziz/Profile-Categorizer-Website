@@ -1,0 +1,24 @@
+{% import "components.html" as components %} 
+<!-- Extending from the base template -->
+{% extends "base.html" %} 
+
+<!-- Titler block from the base template -->
+{% block title %} Search {% endblock %} 
+
+<!-- Head block where all the imports are included from the base tempalate -->
+{% block head %} {{super()}} {% endblock %} 
+
+{% block body %}
+    {{ components.nav() }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10">
+                {% print(prediction) %}
+            </div>
+            <div class="col-2">
+                {{ components.sideIcons() }}
+            </div>
+        </div>
+
+    </div>
+{% endblock body %}
