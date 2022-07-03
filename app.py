@@ -1,14 +1,13 @@
-import pandas as pd
-import numpy as np
 import os
 import re
+import pandas as pd
+import numpy as np
 
 import pickle
 from nltk import TweetTokenizer
 from nltk import PorterStemmer
 from scipy import rand
 import scipy.sparse as sp
-
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
