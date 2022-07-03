@@ -12,7 +12,7 @@ endblock %} {% block body %} {{ components.nav() }}
         category.
       </div>
       <div class="get-started-btn">
-        <button>Get Started</button>
+        <a href="{{url_for('search')}}" >Get Started</a>
       </div>
     </div>
     <div class="col-6">{{ components.sideIcons() }}</div>

@@ -1,5 +1,6 @@
 from crypt import methods
 import imp
+from urllib import response
 import pandas as pd
 import numpy as np
 import os
@@ -7,10 +8,11 @@ import json
 import re
 
 import pickle
-
+import time
 import nltk
 from nltk import TweetTokenizer
 from nltk import PorterStemmer
+from scipy import rand
 import scipy.sparse as sp
 
 
@@ -18,17 +20,22 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 import ast
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, session, make_response
 from sklearn.feature_extraction.text import CountVectorizer
 import warnings
+import random
 warnings.filterwarnings('ignore')
 
 
 app = Flask(__name__)
-
+history = {}
 @app.route('/')
 def index():
-    return render_template("index.html")
+	return render_template("index.html")
+
+@app.route('/history')
+def history():
+	return render_template("history.html")
 
 @app.route('/search', methods=["POST", "GET"]) 
 def search():
@@ -54,12 +61,6 @@ def predict():
 	for heading in scraped_headers:
 		if heading not in save_columns:
 			cleaned_df.drop(heading, axis=1, inplace=True) 
-
-
-	# cleaned_df.to_csv('./Dataset/test_tweetv3.csv', mode='a')
-
-
-	# cleaning further data extracting the info we need such as location and bio etc. 
 
 	rows = cleaned_df['user']
 
@@ -149,8 +150,18 @@ def predict():
 	combined_user_input.todense()
 	model = pickle.load(open('lr_tfidf_trained_model.pkl', 'rb'))
 	prediction = model.predict(combined_user_input)
-	return render_template('prediction.html',prediction = prediction)
-
-
+	# if prediction == 0:
+	# 	return setCookies(username, "Actor")
+	# elif prediction == 1:
+	# 	return setCookies(username, "Content Creator")
+	# elif prediction == 2:
+	# 	return setCookies(username, "Education")
+	# elif prediction == 3:
+	# 	return setCookies(username, "Politician")
+	# elif prediction == 4:
+	# 	return setCookies(username, "Singer")
+	# elif prediction == 5:
+	# 	return setCookies(username, "Sports")
+	return render_template("prediction.html", prediction = prediction)
 if __name__ == "__main__":
     app.run(debug = True)

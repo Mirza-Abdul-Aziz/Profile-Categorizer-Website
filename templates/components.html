@@ -25,23 +25,8 @@
                 </div>
             </li>
             <li class="nav-item"><a href="/" class="nav-link" id="navlink">Home</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navlink" data-toggle="dropdown" data-target="dropdown_target">
-                    Categories
-                    <span class="caret"></span>
-                </a>
-                <!-- Dropdown items of Categories -->
-                <div class="dropdown-menu" aria-labelledby="dropdown_target">
-                    <a class='nav-link' id="navlink" href='#'>Polititian</a>
-                    <a class='nav-link' id="navlink" href='#'>Actor</a>
-                    <a class='nav-link' id="navlink" href='#'>Singer</a>
-                    <a class='nav-link' id="navlink" href='#'>Content Creator</a>
-                    <a class='nav-link' id="navlink" href='#'>Sports</a>
-                    <a class='nav-link' id="navlink" href='#'>Education</a>
-                </div>
-            </li>
             <li class="nav-item"><a href="/search" id="navlink" class="nav-link">Search</a></li>
-            <li class="nav-item"><a href="#" id="navlink" class="nav-link">History</a></li>
+            <li class="nav-item"><a href="/history" id="navlink" class="nav-link">History</a></li>
         </ul>
     </div>
 </nav>
@@ -68,4 +53,8 @@
             <img src="../static/theatre.svg" alt="" class="politician" />
         </div>
     </div>
+{% endmacro %}
+
+{% macro printPrediction(prediction) %}
+    
 {% endmacro %}

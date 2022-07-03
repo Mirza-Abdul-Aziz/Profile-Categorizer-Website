@@ -46,7 +46,7 @@ body {
   text-align: left;
   margin-top: 40px;
 }
-.get-started-btn button {
+.get-started-btn a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -66,7 +66,7 @@ body {
   box-shadow: 5px 4px 10px;
   border-radius: 41px;
 }
-.get-started-btn button:hover {
+.get-started-btn a:hover {
   background-color: var(--text-blue);
   color: var(--white);
   border-color: var(--text-blue);
@@ -135,7 +135,7 @@ body {
   border-radius: 39.5px;
 }
 
-.search-btn{
+.search-btn {
   width: 150px;
   height: 76px;
 
@@ -148,8 +148,38 @@ body {
   border-radius: 41px;
 }
 
-.search-btn:hover{
+.search-btn:hover {
   background-color: var(--text-blue);
   color: var(--white);
   border-color: var(--text-blue);
+}
+
+.prediction-box {
+  text-align: center;
+  background-color: var(--navbar-color);
+  width: 20%;
+  height: 30%;
+  margin: auto;
+  margin-top: 20%;
+  margin-left: 750px;
+  border: 0px solid;
+  border-color: var(--text-blue);
+  border-radius: 10%;
+  box-shadow: 5px 4px 10px;
+  color: var(--text-dark-blue);
+}
+.prediction {
+  font-family: serif;
+  font-weight: bolder;
+  font-size: 50px;
+  padding-top: 25%;
+}
+
+.back-link {
+  text-align: center;
+  padding-left: 290px;
+  padding-top: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: var(--text-dark-blue);
 }
