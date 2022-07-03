@@ -115,10 +115,6 @@ def predict():
 		def remove_pattern(column_data, pattern):
 			processed_data = re.sub(pattern,"", column_data)
 			return processed_data
-		
-		# #Removing twitter urls
-		# url_regex = "(https?://)(s)*(www.)?(s)*((w|s)+.)*([w-s]+/)*([w-]+)((?)?[ws]*=s*[w%&]*)*"
-		# sample_data["Processed "+column] = sample_data["processed "+column].replace(url_regex, "", regex=True)
 
 		#Removing twitter handles
 		sample_data["Processed "+column] = np.vectorize(remove_pattern)(sample_data[column], "@[\w]*")
