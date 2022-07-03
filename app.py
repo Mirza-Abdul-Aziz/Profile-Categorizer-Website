@@ -1,15 +1,9 @@
-from crypt import methods
-import imp
-from urllib import response
 import pandas as pd
 import numpy as np
 import os
-import json
 import re
 
 import pickle
-import time
-import nltk
 from nltk import TweetTokenizer
 from nltk import PorterStemmer
 from scipy import rand
@@ -21,9 +15,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 import ast
 from flask import Flask, render_template, redirect, url_for, request, session, make_response
-from sklearn.feature_extraction.text import CountVectorizer
 import warnings
-import random
 warnings.filterwarnings('ignore')
 
 
