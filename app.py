@@ -9,6 +9,8 @@ from nltk import PorterStemmer
 from scipy import rand
 import scipy.sparse as sp
 
+import time
+
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -149,6 +151,10 @@ def predict():
 	# 	return setCookies(username, "Singer")
 	# elif prediction == 5:
 	# 	return setCookies(username, "Sports")
-	return render_template("prediction.html", prediction = prediction)
+	app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+	key = time.time()
+	history[time] = prediction
+	session['history'] = history
+	return render_template("prediction.html", prediction = session)
 if __name__ == "__main__":
     app.run(debug = True)
