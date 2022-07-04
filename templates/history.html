@@ -8,15 +8,23 @@
 <!-- Head block where all the imports are included from the base tempalate -->
 {% block head %} {{super()}} {% endblock %} {% block body %} {{ components.nav()
 }}
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-10">
-      <p>{% print(session) %}</p>
-      <div class="back-link">
+<div class="container">
+      <table class="table table-striped">
+        <tr>
+          <th>Time</th>
+          <th>Handle Searched</th>
+          <th>Prediction</th>
+        </tr>
+        {% for s in session: %}
+        <tr>
+          <td>{% print(s) %}</td>
+          <td>{% print(session[s][0]) %}</td>
+          <td>{% print(session[s][1]) %}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <div class="del-link">
         <a href="{{url_for('delSession')}}">Delete History</a>
       </div>
-    </div>
-    <div class="col-2">{{ components.sideIcons() }}</div>
-  </div>
 </div>
 {% endblock body %}
