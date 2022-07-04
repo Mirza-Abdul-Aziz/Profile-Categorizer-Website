@@ -21,14 +21,20 @@ warnings.filterwarnings('ignore')
 
 
 app = Flask(__name__)
-history = {}
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+history_s = {}
 @app.route('/')
 def index():
 	return render_template("index.html")
 
+@app.route('/delSession')
+def delSession():
+	session.clear()
+	return redirect(url_for('history'))
+
 @app.route('/history')
 def history():
-	return render_template("history.html")
+	return render_template("history.html", session = session)
 
 @app.route('/search', methods=["POST", "GET"]) 
 def search():
@@ -139,22 +145,24 @@ def predict():
 	combined_user_input.todense()
 	model = pickle.load(open('lr_tfidf_trained_model.pkl', 'rb'))
 	prediction = model.predict(combined_user_input)
-	# if prediction == 0:
-	# 	return setCookies(username, "Actor")
-	# elif prediction == 1:
-	# 	return setCookies(username, "Content Creator")
-	# elif prediction == 2:
-	# 	return setCookies(username, "Education")
-	# elif prediction == 3:
-	# 	return setCookies(username, "Politician")
-	# elif prediction == 4:
-	# 	return setCookies(username, "Singer")
-	# elif prediction == 5:
-	# 	return setCookies(username, "Sports")
-	app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
-	key = time.time()
-	history[time] = prediction
-	session['history'] = history
-	return render_template("prediction.html", prediction = session)
+	key = time.ctime()
+	if prediction == 0:
+		session[str(key)] = [username, "Actor"]
+		return render_template("prediction.html", prediction = "Actor")
+	elif prediction == 1:
+		session[str(key)] = [username, "Content Creator"]
+		return render_template("prediction.html", prediction = "Content CReator")
+	elif prediction == 2:
+		session[str(key)] = [username, "Education"]
+		return render_template("prediction.html", prediction = "Education")
+	elif prediction == 3:
+		session[str(key)] = [username, "Politician"]
+		return render_template("prediction.html", prediction = "Politician")
+	elif prediction == 4:
+		session[str(key)] = [username, "Singer"]
+		return render_template("prediction.html", prediction = "Singer")
+	elif prediction == 5:
+		session[str(key)] = [username, "Sports"]
+		return render_template("prediction.html", prediction = "Sports")
 if __name__ == "__main__":
     app.run(debug = True)
