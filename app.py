@@ -62,7 +62,7 @@ def predict():
 
 	#Validating if the user exist or not
 	if tweets_df.empty:
-		return render_template("prediction.html", prediction = "User Not Found! Enter valid user handle.")
+		return render_template("prediction.html", prediction = "User Not Found!")
 	else:
 		tweets_df.to_csv(f'./raw_tweets_data.csv', mode='w') # saving raw tweets scrapped into a csv file
 		cleaned_df = pd.read_csv("./raw_tweets_data.csv", skipinitialspace=True) 
