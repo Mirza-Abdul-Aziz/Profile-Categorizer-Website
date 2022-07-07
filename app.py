@@ -171,7 +171,7 @@ def predict():
 			return render_template("prediction.html", prediction = "Actor")
 		elif prediction == 1:
 			session[str(key)] = [username, "Content Creator"]
-			return render_template("prediction.html", prediction = "Content CReator")
+			return render_template("prediction.html", prediction = "Content Creator")
 		elif prediction == 2:
 			session[str(key)] = [username, "Education"]
 			return render_template("prediction.html", prediction = "Education")
